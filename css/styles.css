@@ -267,8 +267,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  height: 120px;
   margin-bottom: 30px;
 
   background-color: var(--section-color2);
@@ -310,9 +309,7 @@ button {
 .description {
   padding-top: 30px;
   padding-bottom: 30px;
-  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px; */
+  background-color: var(--primary-bg-color);
 }
 
 .team-item img {
@@ -348,11 +345,18 @@ button {
   gap: 10px;
 }
 
+.soc-link-item {
+  width: 44px;
+  height: 44px;
+}
+
 .soc-links .link {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-bg-color);
 
   border-radius: 50%;
   color: var(--soc-link-color);
@@ -374,23 +378,21 @@ button {
 
 .customers-section .customer-list {
   display: flex;
-
   gap: 30px;
   margin-top: 50px;
 }
 
 .customer-list .customer-list-item {
   width: calc((100%-150px) / 6);
+  height: 92px;
 }
 
 .customers-section .link {
   display: flex;
   justify-content: center;
-
-  padding-top: 16px;
-  padding-bottom: 16px;
-  /* padding-right: 32px;
-  padding-left: 32px; */
+  align-items: center;
+  width: 100%;
+  height: 100%;
 
   color: var(--soc-link-color);
   border: 1px solid var(--soc-link-color);
@@ -470,13 +472,14 @@ button {
 }
 
 .footer-section .soc-links .link:hover,
-.footer-section .soc-links .link::after {
+.footer-section .soc-links .link:focus {
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
 }
 
 /* portfolio-page */
 /* portfolio-section */
+
 .buttons-switches {
   display: flex;
   justify-content: center;
@@ -490,7 +493,7 @@ button {
   padding-right: 22px;
   padding-left: 22px;
   border-radius: 4px;
-  position: relative;
+  /* position: relative; */
 
   font-weight: 500;
   font-size: 16px;
@@ -502,27 +505,12 @@ button {
   cursor: pointer;
 }
 
-.buttons-switches .buttons-switches-item::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-}
-
-.buttons-switches .buttons-switches-item:hover::after,
-.buttons-switches .buttons-switches-item:focus::after {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
 .buttons-switches .buttons-switches-item:hover,
 .buttons-switches .buttons-switches-item:focus {
   color: var(--hero-title-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -532,30 +520,15 @@ button {
 }
 
 .portfolio-item > a {
-  position: relative;
   display: block;
   text-decoration: none;
 }
 
-.portfolio-item > a::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.portfolio-item > a:hover::after {
+.portfolio-item > a:hover,
+.portfolio-item > a:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-/* .portfolio-item > a:hover,
-.portfolio-item > a:focus {
-  
-} */
 
 .portfolio-item img {
   display: block;
